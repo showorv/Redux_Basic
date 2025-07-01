@@ -2,7 +2,9 @@
 // import { decrement, increment } from './redux/feature/counter/counterSlice';
 // import { useAppDispatch, useAppSelector } from './redux/hook.tsx'
 
+import { Link, Outlet } from "react-router"
 import { Button } from "./components/ui/button"
+import { ModeToggle } from "./components/mode-toggle"
 
 const App = ()=>{
 
@@ -25,7 +27,14 @@ const App = ()=>{
     {/* <button onClick={handleIncrement}>Increment</button>
     <button>{count}</button>
     <button onClick={handleDecrement}>Decrement</button> */}
+    <Button ><Link to="tasks">Task</Link></Button>
+    <Button><Link to="users">User</Link></Button>
+
+    <ModeToggle />
+
+    <Outlet />
     </>
+    
   )
 }
 
